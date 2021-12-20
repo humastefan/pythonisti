@@ -51,7 +51,55 @@ print(x7**2 + y7**2 - 23)
 Indicație. Se compară primul număr cu toate celelalte, al doilea cu cele care îi urmează, al treilea cu al patrulea. 
 Dacă în nici o comparaţie nu rezultă egalitate, se tipăreşte mesajul corespunzător..."""
 
-a, b, c, d = input("a, b, c, d:" ).split()
-if a != b and a1= c and a != d and b != c and b != d and c != d:
+a, b, c, d = input("a, b, c, d:").split()
+if a != b and a!= c and a != d and b != c and b != d and c != d:
     print("all distinct")
 else:
+    if a == b:
+        print("val a egal cu b")
+    elif a == c:
+        print("val a egal cu c")
+    elif a == d:
+        print("val a egal cu d")
+    elif b == c:
+        print("val b egal cu c")
+    elif b == d:
+        print("val b egal cu d")
+    else:
+        print("val c egal d")
+
+#Se citesc trei valori reale a, b, c. Să se precizeze dacă ele pot fi laturile unui triunghi
+
+a5, b5, c5 = input("a5, b5, c5:").split()
+if a5 + b5 < c5:
+    print("Cu numerele ", a5, b5, c5, "poti face un triunghi")
+elif a5 + c5 < b5:
+    print("Cu numerele ", a5, b5, c5, "poti face un triunghi")
+elif b5 + c5 < a5:
+    print("Cu numerele ", a5, b5, c5, "poti face un triunghi")
+else:
+    print("Cu numerele ", a5, b5, c5, "nu poti face un triunghi")
+
+a5, b5, c5 = input("a5, b5, c5:").split()
+if a5 + b5 > c5 and a5 + c5 > b5 and b5 + c5 > a5:
+    print("Cu numerele ", a5, b5, c5, "poti face un triunghi")
+else:
+    print("Cu numerele ", a5, b5, c5, "nu poti face un triunghi")
+
+# 5. Se citesc 3 numere intregi. Să se tipărească, dacă există, numărul care este egal cu suma celorlalte două.
+#a6, b6, c6 = input("a6, b6, c6:").split()
+a6 = int(input("a6:"))
+b6 = int(input("b6:"))
+c6 = int(input("c6:"))
+if a6+b6 == c6:
+    print(c6, "c ul")
+elif a6 + c6 == b6:
+    print(b6, "b ul")
+elif c6 + b6 == a6:
+    print(a6, "a ul")
+else:
+    print("no can do")
+
+print(a6 + c6 == b6)
+print(a6 + c6)
+print(a6, b6, c6)
